@@ -24,6 +24,18 @@ class AuthController extends Controller
     }
 
     public function login(Request $request){
+        // var_dump($request->all());
+        // $validator = validator($request->all(), [
+        //     'username' => 'required|min:3|max:100',
+        //     'password' => 'required|min:3|max:100',
+        // ]);
+
+        // if($validator->fails()){
+        //     return redirect('admin/login')
+        //             ->withErrors($validator)
+        //             ->withInput();
+        // };
+        
         $credentials = [
             'username' => $request->username,
             'password' => $request->password
