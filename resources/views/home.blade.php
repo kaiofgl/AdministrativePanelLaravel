@@ -14,10 +14,19 @@
                 Painel Administrativo
             </h1>
             <p class="text-description">
-                Este é um sistema de teste, utilizado para estudos e aplicar dos conhecimentos em desenvolvimento front-end, back-end e banco de dados.
-                Nele você encontrará CRUDs, Layouts, Paginações e Utilização de APIs
+                Este é um sistema de teste, utilizado para estudos e aplicação dos conhecimentos em desenvolvimento <span>Front-End</span>, <span>Back-End</span> e <span>Banco de Dados</span>.
+                Nele você encontrará <span>CRUDs</span>, <span>Layouts</span>, <span>Paginações</span> e <span>Utilização de APIs</span>.
             </p>
-           
+           <div class="container-buttons">
+               <a href="/admin">
+                   <button class="first-button">Acessar Painel</button>
+               </a>
+
+               <a href="https://github.com/kaiofgl/AdministrativePanelLaravel">
+                   <button class="first-button">Github</button>
+               </a>
+               
+           </div>
         </div>
     </div>
 </body>

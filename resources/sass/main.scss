@@ -1,9 +1,13 @@
 // Variaveis
 @import 'abstract/variables';
 
+// Componentes
+@import 'components/buttons';
+
 // Reset de layout
 @import 'base/resets';
 
-
+// Paginas
 @import 'pages/home';
 @import 'pages/login';
+@import 'pages/dashboard'
