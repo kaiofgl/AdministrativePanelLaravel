@@ -1,0 +1,15 @@
+.first-button{
+    padding:0;
+    border:none;
+    background: white;
+    padding: 15px 50px;
+    font-family: Publica Sans Extra Light;
+    color:black;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    &:hover{
+        background: #e0e0e0;
+        color: $mainOrange;
+    }
+}
