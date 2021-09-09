@@ -200,7 +200,6 @@ body, html {
   width: 240px;
   height: 100%;
   padding: 30px;
-  border-right: 1px solid #707070;
   background: #1b232a;
   display: table-cell;
   vertical-align: top;
@@ -231,10 +230,19 @@ body, html {
   font-weight: 200;
   position: relative;
   font-family: Publica Sans Medium;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
   color: white;
   cursor: pointer;
+}
+
+.container .side-menu .menu li a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.container .side-menu .menu li a:hover {
+  color: #3BA8B4;
 }
 
 .container .side-menu .menu li:first-child {
@@ -243,11 +251,8 @@ body, html {
   line-height: 35px;
   font-size: 22px;
   font-weight: 400;
-  color: #fdb5a1;
-}
-
-.container .side-menu .menu li:hover {
-  color: #F16136;
+  color: white;
+  cursor: default;
 }
 
 .container .side-menu .logout-container {

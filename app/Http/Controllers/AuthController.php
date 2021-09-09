@@ -9,7 +9,7 @@ class AuthController extends Controller
 {   
     public function dashboard(){
         if(Auth::guard('admin')->check() === true){
-            return view('admin.dashboard');
+            return view('admin.dashboard',['route'=>'null']);
         }
 
         return redirect()->route('admin.login');
@@ -17,7 +17,7 @@ class AuthController extends Controller
 
     public function formLogin(){
         if(Auth::guard('admin')->check() === true){
-            return view('admin.dashboard');
+            return view('admin.dashboard',['route'=>'null']);
         }else{
             return view('admin.loginForm');
         }

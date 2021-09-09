@@ -9,12 +9,10 @@ body, html{
         width: 240px;
         height: 100%;
         padding: 30px;
-        border-right: 1px solid $secondaryGray;
         background: #1b232a;
         display: table-cell;
         vertical-align: top;
         color: #fff;
-        
         h1{
             text-transform: uppercase;
             color: $mainOrange;
@@ -36,21 +34,26 @@ body, html{
                 font-weight: 200;
                 position: relative;
                 font-family: Publica Sans Medium;
-                transition: 0.5s all;
                 color: white;
                 cursor: pointer;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    transition: 0.5s all;
+                    &:hover{
+                        color:$mainBlue;
+                    }
+                }
                 &:first-child{
                     font-family: Publica Sans Bold;
                     height: 35px;
                     line-height: 35px;
                     font-size: 22px;
                     font-weight: 400;
-                    color:#fdb5a1;
+                    color:white;
+                    cursor:default;
                 }
-                &:hover{
-                    color:$mainOrange;
-                    
-                }
+                
             }
         }
         .logout-container{
