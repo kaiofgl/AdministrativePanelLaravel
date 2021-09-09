@@ -18,7 +18,7 @@
                 Nele você encontrará <span>CRUDs</span>, <span>Layouts</span>, <span>Paginações</span> e <span>Utilização de APIs</span>.
             </p>
            <div class="container-buttons">
-               <a href="/admin">
+               <a href="{{ route('admin')}}">
                    <button class="first-button">Acessar Painel</button>
                </a>
 
