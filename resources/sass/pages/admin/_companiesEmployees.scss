@@ -1,0 +1,26 @@
+.container__companies-employes{
+    height: 100%;
+    display:flex;
+    .container__companies-employes__title{
+        color:blue;
+    }
+    text-align: center;
+    .container__companies-employes__form{
+        width: 100%;
+        margin: auto;
+        label, input{
+            font-family: Publica Sans Bold;
+            display: block;
+            width: 100%;
+        }
+
+        button{
+            color:blue;
+        }
+        #form__companies-employes{
+            display: inline-block;
+            margin:auto;
+            width: 30%;
+        }
+    }
+}

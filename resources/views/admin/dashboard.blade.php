@@ -10,21 +10,15 @@
 <body class="body-dashboard">
     <div class="container">
         @include('partials.sideMenu')
-
-        <div class="container-dashboard">
-            <div class="title-dashboard">
-                @if($route)
-                    @if($route!='null')
-                        @include('partials.admin.'.$route,[
-                            'data'=>$data])
-                    @else
-                    <div class="null-container-dashboard">
-                        <p>Selecione uma opção</p>
-                    </div>
-                    @endif
-                @endif
+        @if($route)
+            @if($route!='null')
+                @include('partials.admin.'.$route)
+            @else
+            <div class="null-container-dashboard">
+                <p>Selecione uma opção</p>
             </div>
-        </div>
+            @endif
+        @endif
     </div>
 </body>
 </html>

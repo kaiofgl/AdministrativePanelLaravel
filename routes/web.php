@@ -26,6 +26,7 @@ Route::get('/admin/logout',[AuthController::class, 'logout'])->name('admin.logou
 
 Route::get('/admin/companies/list',[CompaniesController::class, 'showListCompanies'])->name('admin.companies.list');
 Route::get('/admin/companies/add',[CompaniesController::class, 'showAddCompanies'])->name('admin.companies.add');
+Route::post('admin/companies/add/do',[CompaniesController::class,'addCompanies'])->name('admin.companies.add.do');
 
 Route::get('/admin/employees/list',[EmployeesController::class, 'showListEmployees'])->name('admin.employees.list');
 Route::get('/admin/employees/add',[EmployeesController::class, 'showAddEmployees'])->name('admin.employees.add');
