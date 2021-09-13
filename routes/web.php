@@ -24,9 +24,12 @@ Route::get('/admin/login', [AuthController::class, 'formLogin'])->name('admin.lo
 Route::post('/admin/login/do',[AuthController::class, 'login'])->name('admin.login.do');
 Route::get('/admin/logout',[AuthController::class, 'logout'])->name('admin.logout');
 
-Route::get('/admin/companies/list',[CompaniesController::class, 'showListCompanies'])->name('admin.companies.list');
 Route::get('/admin/companies/add',[CompaniesController::class, 'showAddCompanies'])->name('admin.companies.add');
 Route::post('admin/companies/add/do',[CompaniesController::class,'addCompanies'])->name('admin.companies.add.do');
+
+Route::get('/admin/companies/list',[CompaniesController::class, 'listCompanies'])->name('admin.companies.list');
+Route::get('/admin/companies/delete/{id}',[CompaniesController::class, 'deleteCompanies'])->name('admin.companies.delete');
+
 
 Route::get('/admin/employees/list',[EmployeesController::class, 'showListEmployees'])->name('admin.employees.list');
 Route::get('/admin/employees/add',[EmployeesController::class, 'showAddEmployees'])->name('admin.employees.add');
