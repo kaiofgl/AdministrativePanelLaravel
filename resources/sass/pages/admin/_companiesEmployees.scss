@@ -5,12 +5,12 @@
         color:blue;
     }
     text-align: center;
-    .container__companies-employes__form{
+    .container__companies-employes__form, .container__companies-employes__list{
         width: 100%;
         margin: auto;
         label, input{
             font-family: Publica Sans Bold;
-            display: block;
+            display: block; 
             width: 100%;
         }
 
@@ -18,9 +18,28 @@
             color:blue;
         }
         #form__companies-employes{
-            display: inline-block;
+            display: inline-block; 
             margin:auto;
             width: 30%;
+            color:red;
+        }
+
+    }
+    .pagination-center{
+        nav{
+            .pagination{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .container__companies-employees__list{
+        display: inline-block; 
+        margin:auto;
+        .list__tbody-td{
+            justify-content: space-around;
+            display: flex;
+            text-align: center;
         }
     }
 }

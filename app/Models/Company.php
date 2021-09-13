@@ -14,16 +14,18 @@ class Company extends Model
 
     //Funcao para adicionar empresa no DB
     public function addCompanyToTable(Request $request){
-
         $company = new Company();
         $company->name = $request->name;
         $company->email = $request->email;
         $company->website_url = $request->website;
         $company->logo_path = $request->logo_path;
-
         $company->save();
-
         return $this;
+    }
+
+    public function listCompanies(){
+        $company = new Company();
+        return $company::paginate(10);
     }
 
 }

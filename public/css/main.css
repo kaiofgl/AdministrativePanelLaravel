@@ -1,78 +1,63 @@
 @font-face {
-  font-family: 'Publica Sans Black';
-  src: url(../../../fonts/PublicaSans-Black.otf) format("opentype");
+  font-family: "Publica Sans Black";
+  src: url(/fonts/PublicaSans-Black.otf?9800861050308a39693c5d3537d5ae40) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Black Italic';
-  src: url(../../../fonts/PublicaSans-BlackItalic.otf) format("opentype");
+  font-family: "Publica Sans Black Italic";
+  src: url(/fonts/PublicaSans-BlackItalic.otf?29f506480461c12187d1a3afd853bd81) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Bold';
-  src: url(../../../fonts/PublicaSans-Bold.otf) format("opentype");
+  font-family: "Publica Sans Bold";
+  src: url(/fonts/PublicaSans-Bold.otf?d92a41822987402eb44362674981fd90) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Bold Italic';
-  src: url(../../../fonts/PublicaSans-ExtraBoldItalic.otf) format("opentype");
+  font-family: "Publica Sans Bold Italic";
+  src: url(/fonts/PublicaSans-ExtraBoldItalic.otf?f18dacfbe2c3a2cb2f4b432532fcac78) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Extra Light';
-  src: url(../../../fonts/PublicaSans-ExtraLight.otf) format("opentype");
+  font-family: "Publica Sans Extra Light";
+  src: url(/fonts/PublicaSans-ExtraLight.otf?4829c3fe711d3c1e255245050aabf402) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Extra Light Italic';
-  src: url(../../../fonts/PublicaSans-ExtraLightItalic.otf) format("opentype");
+  font-family: "Publica Sans Extra Light Italic";
+  src: url(/fonts/PublicaSans-ExtraLightItalic.otf?aa5fa3e4aaa9b4eeaf0fe75c814ffb31) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Extra Italic';
-  src: url(../../../fonts/PublicaSans-ItaliC.otf) format("opentype");
+  font-family: "Publica Sans Extra Italic";
+  src: url(/fonts/PublicaSans-ItaliC.otf?600582b13b80cfa6083ef654040f3303) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Extra Light';
-  src: url(../../../fonts/PublicaSans-Light.otf) format("opentype");
+  font-family: "Publica Sans Extra Light";
+  src: url(/fonts/PublicaSans-Light.otf?b854370ac7d7c91a468036a6514a6c65) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Light Italic';
-  src: url(../../../fonts/PublicaSans-LightItalic.otf) format("opentype");
+  font-family: "Publica Sans Light Italic";
+  src: url(/fonts/PublicaSans-LightItalic.otf?3fe5368302e927c3efada71de17be608) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Medium';
-  src: url(../../../fonts/PublicaSans-Medium.otf) format("opentype");
+  font-family: "Publica Sans Medium";
+  src: url(/fonts/PublicaSans-Medium.otf?41df67a0ef1074306bf00f34522dfa7f) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Medium Italic';
-  src: url(../../../fonts/PublicaSans-MediumItalic.otf) format("opentype");
+  font-family: "Publica Sans Medium Italic";
+  src: url(/fonts/PublicaSans-MediumItalic.otf?ddb8d9318897c8ddbfe96288e53fb854) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Thin';
-  src: url(../../../fonts/PublicaSans-Thin.otf) format("opentype");
+  font-family: "Publica Sans Thin";
+  src: url(/fonts/PublicaSans-Thin.otf?6ae1faf5157d30a569a681d88a561429) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Thin Italic';
-  src: url(../../../fonts/PublicaSans-ThinItalic.otf) format("opentype");
+  font-family: "Publica Sans Thin Italic";
+  src: url(/fonts/PublicaSans-ThinItalic.otf?aae142869608a69a6127c225ea8ced46) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Ultra Light';
-  src: url(../../../fonts/PublicaSans-UltraLight.otf) format("opentype");
+  font-family: "Publica Sans Ultra Light";
+  src: url(/fonts/PublicaSans-UltraLight.otf?70c9249cc851163367000d1c965d7476) format("opentype");
 }
-
 @font-face {
-  font-family: 'Publica Sans Ultra Light Italic';
-  src: url(../../../fonts/PublicaSans-UntraLightItalic.otf) format("opentype");
+  font-family: "Publica Sans Ultra Light Italic";
+  src: url(/fonts/PublicaSans-UntraLightItalic.otf?a607262415bcf46b7c2212f2f181b2c9) format("opentype");
 }
-
 .first-button {
   padding: 0;
   border: none;
@@ -81,10 +66,8 @@
   font-family: Publica Sans Extra Light;
   color: black;
   cursor: pointer;
-  -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-
 .first-button:hover {
   background: #e0e0e0;
   color: #F16136;
@@ -135,7 +118,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -146,35 +129,42 @@ table {
 
 .container__companies-employes {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
-
 .container__companies-employes .container__companies-employes__title {
   color: blue;
 }
-
-.container__companies-employes .container__companies-employes__form {
+.container__companies-employes .container__companies-employes__form, .container__companies-employes .container__companies-employes__list {
   width: 100%;
   margin: auto;
 }
-
-.container__companies-employes .container__companies-employes__form label, .container__companies-employes .container__companies-employes__form input {
+.container__companies-employes .container__companies-employes__form label, .container__companies-employes .container__companies-employes__form input, .container__companies-employes .container__companies-employes__list label, .container__companies-employes .container__companies-employes__list input {
   font-family: Publica Sans Bold;
   display: block;
   width: 100%;
 }
-
-.container__companies-employes .container__companies-employes__form button {
+.container__companies-employes .container__companies-employes__form button, .container__companies-employes .container__companies-employes__list button {
   color: blue;
 }
-
-.container__companies-employes .container__companies-employes__form #form__companies-employes {
+.container__companies-employes .container__companies-employes__form #form__companies-employes, .container__companies-employes .container__companies-employes__list #form__companies-employes {
   display: inline-block;
   margin: auto;
   width: 30%;
+  color: red;
+}
+.container__companies-employes .pagination-center nav .pagination {
+  display: flex;
+  justify-content: center;
+}
+.container__companies-employes .container__companies-employees__list {
+  display: inline-block;
+  margin: auto;
+}
+.container__companies-employes .container__companies-employees__list .list__tbody-td {
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
 }
 
 .container-home {
@@ -182,7 +172,6 @@ table {
   height: 700px;
   position: relative;
 }
-
 .container-home .container-center {
   width: 50%;
   height: 50%;
@@ -192,30 +181,25 @@ table {
   bottom: 0;
   right: 0;
 }
-
 .container-home .container-center .text-title {
   color: white;
   font-family: Publica Sans Bold;
-  font-size: 4.0em;
+  font-size: 4em;
   margin-bottom: 30px;
 }
-
 .container-home .container-center .text-description {
   color: white;
   font-family: Publica Sans Thin;
   font-size: 1.1em;
 }
-
 .container-home .container-center .text-description span {
   font-family: Publica Sans Extra Light;
 }
-
 .container-home .container-center .container-buttons {
   margin-top: 30px;
 }
 
 .body-home {
-  background: -webkit-gradient(linear, left top, right top, from(#F16136), to(#FA8133));
   background: linear-gradient(to right, #F16136, #FA8133);
 }
 
@@ -228,7 +212,6 @@ body, html {
   width: 100%;
   height: 100%;
 }
-
 .container .side-menu {
   width: 240px;
   height: 100%;
@@ -238,22 +221,19 @@ body, html {
   vertical-align: top;
   color: #fff;
 }
-
 .container .side-menu h1 {
   text-transform: uppercase;
   color: #F16136;
   font-family: Publica Sans Bold;
-  font-size: 2.0em;
+  font-size: 2em;
   margin-bottom: 30px;
   text-align: center;
 }
-
 .container .side-menu .menu {
   list-style: none;
   margin: 30px 0;
   padding: 0;
 }
-
 .container .side-menu .menu li {
   display: block;
   height: 30px;
@@ -266,18 +246,14 @@ body, html {
   color: white;
   cursor: pointer;
 }
-
 .container .side-menu .menu li a {
   text-decoration: none;
   color: white;
-  -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-
 .container .side-menu .menu li a:hover {
   color: #3BA8B4;
 }
-
 .container .side-menu .menu li:first-child {
   font-family: Publica Sans Bold;
   height: 35px;
@@ -287,13 +263,11 @@ body, html {
   color: white;
   cursor: default;
 }
-
 .container .side-menu .logout-container {
   position: absolute;
   width: 25%;
   bottom: 30px;
 }
-
 .container .side-menu .logout-container a {
   text-decoration: none;
   font-family: Publica Sans Medium;
@@ -302,10 +276,8 @@ body, html {
   font-size: 22px;
   font-weight: 400;
   color: white;
-  -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
-
 .container .side-menu .logout-container a:hover {
   color: #fdb5a1;
 }

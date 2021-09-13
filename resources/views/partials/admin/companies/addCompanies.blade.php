@@ -14,13 +14,13 @@
                 <div class="error_alert">{{ $error }}</div>
             @endforeach
             <label for="name">Nome</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" value="{{ old('name') }}">
 
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" value="{{ old('email') }}">
 
             <label for="website">Website</label>
-            <input type="text" name="website" id="website">
+            <input type="text" name="website" id="website" value="{{ old('website') }}">
             @if($message = Session::get('error_file'))
                 <div class="success_alert">{{ $message }}</div>
             @endif
