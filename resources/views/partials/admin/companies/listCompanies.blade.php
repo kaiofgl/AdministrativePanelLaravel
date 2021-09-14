@@ -27,7 +27,7 @@
                             <td>{{ $datas->email }}</td>
                             <td>{{ $datas->website_url }}</td>
                             <td class="list__tbody-td">
-                                <a href=""><i class="gg-pen"></i></a>
+                                <a href="{{ route('admin.companies.edit', $datas->id)}}"><i class="gg-pen"></i></a>
                                 <a href="{{ route('admin.companies.delete', $datas->id)}}" onclick="return confirm('Você confirma que deseja deleta a empresa {{ $datas->name }}?')"><i class="gg-trash"></i></a>
                             </td>
                         </tr>    
