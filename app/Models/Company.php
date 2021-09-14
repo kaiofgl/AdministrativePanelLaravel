@@ -28,4 +28,22 @@ class Company extends Model
         return $company::paginate(10);
     }
 
+    public function editCompanies(int $id){
+        $company = new Company();
+        $data = $company::find($id);
+        return $data;
+    }
+
+    public function updateCompany(Request $request, int $id){
+        $company = new Company();
+        $dataCompany = $company::find($id);
+        $dataCompany->name = $request->name;
+        $dataCompany->email = $request->email;
+        $dataCompany->website_url = $request->website;
+        if($request->logo_path){
+            $dataCompany->logo_path = $request->logo_path;
+        }
+        $dataCompany->save();
+        return $this;
+    }
 }
