@@ -139,7 +139,7 @@ table {
   width: 100%;
   margin: auto;
 }
-.container__companies-employes .container__companies-employes__form label, .container__companies-employes .container__companies-employes__form input, .container__companies-employes .container__companies-employes__list label, .container__companies-employes .container__companies-employes__list input {
+.container__companies-employes .container__companies-employes__form label, .container__companies-employes .container__companies-employes__form input, .container__companies-employes .container__companies-employes__form select, .container__companies-employes .container__companies-employes__list label, .container__companies-employes .container__companies-employes__list input, .container__companies-employes .container__companies-employes__list select {
   font-family: Publica Sans Bold;
   display: block;
   width: 100%;

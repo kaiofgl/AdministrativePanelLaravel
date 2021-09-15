@@ -25,6 +25,7 @@
     "dependencies": {
         "bootstrap-loader": "^3.0.4",
         "css.gg": "^2.0.0",
+        "jquery-mask-plugin": "^1.14.16",
         "node-sass": "^6.0.1"
     }
 }
