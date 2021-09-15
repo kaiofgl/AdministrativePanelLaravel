@@ -8,12 +8,11 @@
     .container__companies-employes__form, .container__companies-employes__list{
         width: 100%;
         margin: auto;
-        label, input{
+        label, input,select{
             font-family: Publica Sans Bold;
             display: block; 
             width: 100%;
         }
-
         button{
             color:blue;
         }
@@ -23,7 +22,6 @@
             width: 30%;
             color:red;
         }
-
     }
     .pagination-center{
         nav{

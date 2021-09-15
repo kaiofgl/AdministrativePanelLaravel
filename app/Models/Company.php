@@ -46,4 +46,10 @@ class Company extends Model
         $dataCompany->save();
         return $this;
     }
+
+    public function returnAllCompanies(){
+        $company = new Company();
+        $company = $company::all();
+        return $company;
+    }
 }
