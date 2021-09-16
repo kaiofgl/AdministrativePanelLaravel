@@ -70,7 +70,7 @@ class CompaniesController extends Controller
         }
         $company = new Company();
         //Adiciona o caminho da logotipo no objeto da requisição
-        $request->request->add(['logo_path'=>$path]);
+        $request->request->add(['logo_path'=>url($path)]);
         $company->addCompanyToTable($request);
         return redirect()->back()
             ->with('success','A empresa foi cadastrada com sucesso!');
