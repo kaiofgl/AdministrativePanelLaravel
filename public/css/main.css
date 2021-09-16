@@ -153,6 +153,9 @@ table {
   width: 30%;
   color: red;
 }
+.container__companies-employes .container__companies-employes__form #form__companies-employes .logo-companies, .container__companies-employes .container__companies-employes__list #form__companies-employes .logo-companies {
+  height: 80px;
+}
 .container__companies-employes .pagination-center nav .pagination {
   display: flex;
   justify-content: center;
@@ -165,6 +168,9 @@ table {
   justify-content: space-around;
   display: flex;
   text-align: center;
+}
+.container__companies-employes .container__companies-employees__list .logo-companies {
+  height: 50px;
 }
 
 .container-home {

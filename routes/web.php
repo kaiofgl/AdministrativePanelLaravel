@@ -34,7 +34,10 @@ Route::get('/admin/companies/delete/{id}',[CompaniesController::class, 'deleteCo
 Route::get('/admin/companies/edit/{id}',[CompaniesController::class, 'showEditCompanies'])->name('admin.companies.edit');
 Route::post('/admin/companies/edit/do', [CompaniesController::class, 'updateCompanies'])->name('admin.companies.edit.do');
 
-
 Route::get('/admin/employees/add',[EmployeesController::class, 'showAddEmployees'])->name('admin.employees.add');
-Route::get('/admin/employees/list',[EmployeesController::class, 'showListEmployees'])->name('admin.employees.list');
 Route::post('admin/employees/add/do',[EmployeesController::class,'addEmployees'])->name('admin.employees.add.do');
+Route::get('/admin/employees/list',[EmployeesController::class, 'showListEmployees'])->name('admin.employees.list');
+Route::get('/admin/employees/delete/{id}',[EmployeesController::class, 'deleteEmployees'])->name('admin.employees.delete');
+Route::get('/admin/employees/edit/{id}',[EmployeesController::class, 'showEditEmployees'])->name('admin.employees.edit');
+Route::post('/admin/employees/edit/do', [EmployeesController::class, 'updateEmployees'])->name('admin.employees.edit.do');
+

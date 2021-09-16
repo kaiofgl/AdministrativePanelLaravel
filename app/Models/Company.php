@@ -12,6 +12,9 @@ class Company extends Model
 
     protected $table = 'companies';
 
+    public function company(){
+        return $this->belongsTo(Company::class);
+    }
     //Funcao para adicionar empresa no DB
     public function addCompanyToTable(Request $request){
         $company = new Company();
@@ -24,19 +27,16 @@ class Company extends Model
     }
 
     public function listCompanies(){
-        $company = new Company();
-        return $company::paginate(10);
+        return Company::paginate(10);
     }
 
     public function editCompanies(int $id){
-        $company = new Company();
-        $data = $company::find($id);
+        $data = Company::find($id);
         return $data;
     }
 
     public function updateCompany(Request $request, int $id){
-        $company = new Company();
-        $dataCompany = $company::find($id);
+        $dataCompany = Company::find($id);
         $dataCompany->name = $request->name;
         $dataCompany->email = $request->email;
         $dataCompany->website_url = $request->website;
@@ -48,8 +48,8 @@ class Company extends Model
     }
 
     public function returnAllCompanies(){
-        $company = new Company();
-        $company = $company::all();
-        return $company;
+        return Company::all();
     }
+
+    
 }
