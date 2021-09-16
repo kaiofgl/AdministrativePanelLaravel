@@ -21,6 +21,9 @@
             margin:auto;
             width: 30%;
             color:red;
+            .logo-companies{
+                height: 80px;
+            }
         }
     }
     .pagination-center{
@@ -38,6 +41,9 @@
             justify-content: space-around;
             display: flex;
             text-align: center;
+        } 
+        .logo-companies{
+            height: 50px;
         }
     }
 }

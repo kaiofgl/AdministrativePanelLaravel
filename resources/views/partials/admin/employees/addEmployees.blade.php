@@ -5,7 +5,7 @@
         </div>
         <form method="POST" action="{{ route('admin.employees.add.do') }} " id="form__companies-employes">
             @csrf
-            @if($message = Session::get('success'))
+            @if($message = Session::get('message'))
                 <div class="success_alert">{{ $message }}</div>
             @endif
 

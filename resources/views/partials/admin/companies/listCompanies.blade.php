@@ -22,7 +22,7 @@
                     @foreach($data as $datas)
                         
                         <tr>
-                            <td>LOGOTIPO</td>
+                            <td><img class="logo-companies" src="https://dummyimage.com/600x400/949494/0011ff" alt="Imagem de teste"></td>
                             <td>{{ $datas->name }}</td>
                             <td>{{ $datas->email }}</td>
                             <td>{{ $datas->website_url }}</td>

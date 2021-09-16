@@ -1,7 +1,7 @@
 <div class="container__companies-employes">
     <div class="container__companies-employes__form">
         <div class="container__companies-employes__title">
-            <h1>EDIIITTT DE EMPRESA EMPRESAS</h1>
+            <h1>EDIÇÃO DE EMPRESA</h1>
         </div>
         <form method="POST" action="{{ route('admin.companies.edit.do') }}" id="form__companies-employes" enctype="multipart/form-data"> 
             @csrf
@@ -25,8 +25,10 @@
             @if($message = Session::get('error_file'))
                 <div class="success_alert">{{ $message }}</div>
             @endif
-            <img src=" {{ asset('/storage/'.$data->logo_path) }}" alt="{{ $data->name }}">
-            <label for="logo">Logo</label>
+            <!-- <img src=" {{ url('/storage/'.$data->logo_path) }}" alt="{{ $data->name }}">
+             -->
+             <img class="logo-companies" src="https://dummyimage.com/600x400/949494/0011ff" alt="Imagem de teste">
+             <label for="logo">Logo</label>
             <input type="file" name="logo" id="logo">
 
             
