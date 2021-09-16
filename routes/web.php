@@ -6,6 +6,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\EmployeesController;
 use Illuminate\Support\Facades\Artisan;
+use App\Models\Company;
+use App\Models\Employee;
+use App\Http\Resources\CompanyCollection;
+use App\Http\Resources\CompanyEmployeeCollection;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,4 +44,17 @@ Route::get('/admin/employees/list',[EmployeesController::class, 'showListEmploye
 Route::get('/admin/employees/delete/{id}',[EmployeesController::class, 'deleteEmployees'])->name('admin.employees.delete');
 Route::get('/admin/employees/edit/{id}',[EmployeesController::class, 'showEditEmployees'])->name('admin.employees.edit');
 Route::post('/admin/employees/edit/do', [EmployeesController::class, 'updateEmployees'])->name('admin.employees.edit.do');
+
+
+Route::get('api/v1/companies', function(){
+    return CompanyCollection::collection(Company::all());
+});
+
+Route::get('api/v1/companies/{id}/employees', function($id){
+    return new CompanyEmployeeCollection(
+        Employee::select('name','email','phone','cpf','company_id')
+        ->where('company_id','=',$id)
+        ->get());
+});
+
 
