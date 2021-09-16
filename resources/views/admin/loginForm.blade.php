@@ -10,12 +10,12 @@
     <h1>Formulário de Login</h1>
     <form method="post" action="{{ route('admin.login.do') }}">
         @csrf
+        @foreach($errors->all() as $error)
+            <div class="error_alert">{{ $error }}</div>
+        @endforeach
 
-        <!-- @if($errors)
-            <h1>Problemas ao efetuar o login</h1>
-        @endif -->
         <label for="username">Usuário</label>
-        <input type="text" name="username" id="username" value="adminlog">
+        <input type="text" name="username" id="username" value="{{ old('username') }}">
 
         <label for="password">Senha</label>
         <input type="password" name="password" id="password">

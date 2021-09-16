@@ -20,18 +20,32 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    @php 
+                        $companyName = ""
+                    @endphp
                     @foreach($data as $datas)
+                        @for($i = 0; $i < count($data_companies->all()); $i++)
+                            @if($datas->company_id == $data_companies[$i]->id)
+                                @php
+                                    $companyName = $data_companies[$i]->name
+                                @endphp
+                            @endif
+                        @endfor
                         <tr>
                             <td>{{ $datas->name }}</td>
                             <td>{{ $datas->email }}</td>
                             <td>{{ $datas->phone }}</td>
                             <td>{{ $datas->cpf }}</td>
-                            <td>{{ $datas->company_id }}</td>
+                            <td>{{ $companyName }}</td>
                             <td class="list__tbody-td">
                                 <a href="{{ route('admin.employees.edit', $datas->id)}}"><i class="gg-pen"></i></a>
                                 <a href="{{ route('admin.employees.delete', $datas->id)}}" onclick="return confirm('Você confirma que deseja deleta o funcionário {{ $datas->name }}?')"><i class="gg-trash"></i></a>
                             </td>
-                        </tr>    
+                        </tr>
+                        @php 
+                            $companyName = ""
+                        @endphp    
                     @endforeach
                 </tbody>
             </table>

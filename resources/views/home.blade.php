@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="{{('css/main.css') }}"></link>
     <title>Painel Administrativo</title>
+    <script>
+        $(window).load(function() {
+            $("body").removeClass("pre-load");
+        });
+    </script>
 </head>
-<body class="body-home">
+<body class="body-home pre-load">
     <div class="container-home">
         <div class="container-center">
             <h1 class="text-title">
@@ -30,4 +35,5 @@
         </div>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </html>

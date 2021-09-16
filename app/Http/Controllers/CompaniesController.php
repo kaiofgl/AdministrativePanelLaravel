@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Company;
+use App\Models\Employee;
 use Illuminate\Validation\Rule;
 
 class CompaniesController extends Controller
@@ -148,8 +149,10 @@ class CompaniesController extends Controller
     }
 
     public function deleteCompanies(int $id){
-        $company = new Company();
-        $deleted = $company::destroy($id);
+        $employee = new Employee();
+        $employeesDelete = $employee->deleteEmployees($id);
+        $deleted = Company::destroy($id);
+
         // $data = $company->listCompanies();
         return redirect('/admin/companies/list')
             ->with('message',($deleted)? 'A empresa foi deletada com sucesso!' : 'Ocorreu um erro ao excluir a empresa');

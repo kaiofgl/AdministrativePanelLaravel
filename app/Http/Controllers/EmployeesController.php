@@ -14,10 +14,13 @@ class EmployeesController extends Controller
      public function showListEmployees(){
         $employee = new Employee();
         $data = $employee->listEmployees();
+        $dataCompanies = Company::all();
+       
 
         return view('admin.dashboard',[
-            'route'=>'employees.listEmployees',
-            'data'=>$data
+            'route' =>'employees.listEmployees',
+            'data'=>$data,
+            'data_companies'=>$dataCompanies,
         ]);            
     }
 
