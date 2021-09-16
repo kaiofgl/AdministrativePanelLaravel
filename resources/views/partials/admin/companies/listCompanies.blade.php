@@ -11,6 +11,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Logotipo</th>
                         <th>Nome</th>
                         <th>Email</th>
@@ -22,13 +23,14 @@
                     @foreach($data as $datas)
                         
                         <tr>
+                            <td>{{ $datas->id }}</td>
                             <td><img class="logo-companies" src="https://dummyimage.com/600x400/949494/0011ff" alt="Imagem de teste"></td>
                             <td>{{ $datas->name }}</td>
                             <td>{{ $datas->email }}</td>
                             <td>{{ $datas->website_url }}</td>
                             <td class="list__tbody-td">
                                 <a href="{{ route('admin.companies.edit', $datas->id)}}"><i class="gg-pen"></i></a>
-                                <a href="{{ route('admin.companies.delete', $datas->id)}}" onclick="return confirm('Você confirma que deseja deleta a empresa {{ $datas->name }}?')"><i class="gg-trash"></i></a>
+                                <a href="{{ route('admin.companies.delete', $datas->id)}}" onclick="return confirm('Você confirma que deseja deleta a empresa {{ $datas->name }} e seus funcionários?')"><i class="gg-trash"></i></a>
                             </td>
                         </tr>    
                     @endforeach

@@ -209,6 +209,10 @@ table {
   background: linear-gradient(to right, #F16136, #FA8133);
 }
 
+.pre-load {
+  transition: none !important;
+}
+
 body, html {
   height: 100%;
 }

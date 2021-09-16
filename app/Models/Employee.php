@@ -31,8 +31,12 @@ class Employee extends Model
         return Employee::paginate(10);
     }
 
-    public function deleteEmployees(int $id){
-        dd($id);
+    public function deleteEmployees(int $id_company){
+        $listEmployees = Employee::where('company_id','=',$id_company)
+        ->select('id')->distinct()->get()->toArray();
+        Employee::where('company_id', '=', $id_company)->delete();
+        return $this;
+    
     }
     
     public function editEmployees(int $id){

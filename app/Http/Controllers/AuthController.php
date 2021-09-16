@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Auth\TokenGuard;
+use Illuminate\Support\Facades\Validator;
 class AuthController extends Controller
 {   
     public function dashboard(){
@@ -25,11 +26,20 @@ class AuthController extends Controller
 
     public function login(Request $request){
         // var_dump($request->all());
-        // $validator = validator($request->all(), [
-        //     'username' => 'required|min:3|max:100',
-        //     'password' => 'required|min:3|max:100',
-        // ]);
+        $rules = array(
+            'username' => 'required|min:3|max:100',
+            'password' => 'required|min:3|max:100',
+        );
+        $validator = validator($request->all(), [
+            
+        ]);
 
+        $validation = Validator::make($request->request->all(),$rules);
+        if($validation->fails()){
+            return redirect()->back()
+                ->withErrors($validation)
+                ->withInput();
+        }
         // if($validator->fails()){
         //     return redirect('admin/login')
         //             ->withErrors($validator)
