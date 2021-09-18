@@ -291,3 +291,299 @@ body, html {
 .container .side-menu .logout-container a:hover {
   color: #fdb5a1;
 }
+
+.navbar {
+  height: 90px;
+  background: #F16136;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+.navbar__menus-links-login-register {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.navbar__menu-btn {
+  display: none;
+}
+.navbar__logo {
+  color: white;
+  width: 20%;
+  text-align: center;
+}
+.navbar__logo img {
+  vertical-align: middle;
+}
+.navbar__list-links {
+  color: white;
+  width: 50%;
+}
+.navbar__list-links-ul {
+  display: flex;
+}
+.navbar__list-links-ul .active .navbar__list-links-a {
+  font-family: Publica Sans Medium;
+}
+.navbar__list-links-ul :hover {
+  color: #3BA8B4;
+}
+.navbar__list-links-a {
+  transition: 0.5s all;
+  color: white;
+  text-decoration: none;
+  font-family: Publica Sans Thin;
+  margin-right: 30px;
+  font-size: 1.2rem;
+}
+.navbar .navbar__login-register {
+  color: white;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar .navbar__login-register .navbar__login {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar__login-register .navbar__login a {
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.5s all;
+  text-decoration: none;
+  font-family: Publica Sans Thin;
+}
+.navbar .navbar__login-register .navbar__login a i {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.navbar .navbar__login-register .navbar__login :hover {
+  color: #3BA8B4;
+}
+.navbar .navbar__login-register .navbar__register {
+  border: 1px solid white;
+  padding: 12px;
+  border-radius: 40px;
+  transition: 0.5s all;
+}
+.navbar .navbar__login-register .navbar__register a {
+  transition: 0.5s all;
+  color: white;
+  font-size: 1.2rem;
+  font-family: Publica Sans Thin;
+  text-decoration: none;
+}
+.navbar .navbar__login-register .navbar__register :hover {
+  color: #3BA8B4;
+  border-color: #3BA8B4;
+}
+
+.content {
+  padding-top: 90px;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar label[for=navbar__menu-btn]:nth-of-type(1) {
+    position: absolute;
+    top: 0.4em;
+    color: white;
+    right: 0.5em;
+    z-index: 1000;
+    font-size: 3em;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    display: inline-block;
+  }
+  .navbar__menus-links-login-register {
+    width: 70%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    background: #3BA8B4;
+  }
+  .navbar__menu-icon {
+    float: right;
+    margin-right: 20px;
+    font-size: 51px;
+  }
+  .navbar__list-links {
+    width: 80%;
+  }
+  .navbar__list-links-ul {
+    display: grid;
+    grid-auto-columns: 2fh;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .navbar__list-links-ul li {
+    background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 150px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  .navbar__list-links-a {
+    display: contents;
+  }
+  .navbar__list-links-a {
+    font-size: 1rem;
+  }
+  .navbar__login-register {
+    position: absolute;
+    width: 100% !important;
+    left: 0;
+    top: 0;
+    height: 90px;
+  }
+  .navbar__login-registernavbar__login a {
+    font-size: 1rem;
+  }
+  .navbar__login-register .navbar__register {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 448px) {
+  .navbar hr {
+    position: absolute;
+    top: 100px;
+    width: 50%;
+    margin: 2px;
+  }
+  .navbar label[for=navbar__menu-btn]:nth-of-type(1):hover {
+    cursor: pointer;
+  }
+  .navbar #navbar__menu-btn:checked ~ .navbar__menus-links-login-register {
+    -webkit-animation: showMenu cubic-bezier(0.76, 0, 0.09, 1) 0.5s;
+            animation: showMenu cubic-bezier(0.76, 0, 0.09, 1) 0.5s;
+    right: 0;
+  }
+  .navbar__menus-links-login {
+    width: 70%;
+    height: 100%;
+  }
+  .navbar__menus-links-login-register {
+    -webkit-animation: hideMenu cubic-bezier(0.76, 0, 0.09, 1) 0.5s;
+            animation: hideMenu cubic-bezier(0.76, 0, 0.09, 1) 0.5s;
+  }
+  .navbar__menu-icon {
+    float: right;
+    margin-right: 20px;
+    font-size: 51px;
+  }
+  .navbar__list-links {
+    width: 80%;
+  }
+  .navbar__list-links-a {
+    font-size: 1rem;
+  }
+  .navbar__login-register {
+    justify-content: start !important;
+    margin-left: 30px;
+  }
+  .navbar__login-register__login a {
+    font-size: 1rem;
+  }
+  .navbar__login-register__register a {
+    display: none;
+  }
+}
+@-webkit-keyframes showMenu {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes showMenu {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes hideMenu {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -100%;
+    opacity: 0;
+  }
+}
+@keyframes hideMenu {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -100%;
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 640px) {
+  .content {
+    background: saddlebrown;
+  }
+}
+@media screen and (min-width: 960px) {
+  .content {
+    background: green;
+  }
+
+  .navbar hr {
+    display: none;
+  }
+  .navbar__menu-icon {
+    display: none;
+  }
+  .navbar__list-links-a {
+    font-size: 1rem;
+  }
+  .navbar__login-register {
+    width: 35% !important;
+  }
+  .navbar__login-register .navbar__login a {
+    font-size: 1rem;
+  }
+  .navbar__login-register .navbar__register a {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .content {
+    background: blue;
+  }
+
+  .navbar hr {
+    display: none;
+  }
+  .navbar__list-links-a {
+    font-size: 1.2rem;
+  }
+  .navbar__login-register {
+    width: 25% !important;
+  }
+  .navbar__login-register .navbar__login a {
+    font-size: 1.2rem !important;
+  }
+  .navbar__login-register .navbar__register a {
+    font-size: 1.2rem !important;
+  }
+}

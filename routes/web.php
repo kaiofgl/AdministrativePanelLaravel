@@ -45,6 +45,8 @@ Route::get('/admin/employees/delete/{id}',[EmployeesController::class, 'deleteEm
 Route::get('/admin/employees/edit/{id}',[EmployeesController::class, 'showEditEmployees'])->name('admin.employees.edit');
 Route::post('/admin/employees/edit/do', [EmployeesController::class, 'updateEmployees'])->name('admin.employees.edit.do');
 
+Route::get('/ddo',[HomeController::class, 'indexDDO'])->name('ddo');
+
 Route::get('api/v1/companies', function(){
     return new CompanyCollection(Company::all());
 });

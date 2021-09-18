@@ -6,6 +6,26 @@ $mainGray: #707070;
 $secondaryGray:#707070;
 $mainBlue: #3BA8B4;
 
+$sizeHeigthMenu: 90px;
+$navbarMenu__fontSize-lg: 1.2rem;
+$navbarMenu__fontSize-med: 1.0rem;
+
+$navbarMenu__fontSize-sm: 1.2rem;
+
+$transitionDefault: 0.5s all;
+
+//Media 
+$xl: 1920px; // 1400px | Desktop 4k e de alta resolução 
+$lg: 1150px; 
+$lgm: 960px;
+$med: 640px;   // 960p  // 960px | Laptops de 1080 e alta resolução 
+$sm: 448px;   // 448px | Tablets móveis e de baixa resolução 
+// $xl: 87.5em; // 1400px | Desktop 4k e de alta resolução 
+// $lg: 60em;   // 960px | Laptops de 1080 e alta resolução 
+// $med: 40em;  // 640px | Tablets de alta resolução e laptops de baixa resolução 
+// $sm: 28em;   // 448px | Tablets móveis e de baixa resolução 
+// $xs: 20em;   // 320px | Apenas móvel
+
 @font-face {
     font-family: 'Publica Sans Black';
     src: url('../../../public/fonts/PublicaSans-Black.otf') format('opentype');

@@ -1,5 +1,6 @@
 // Variaveis
 @import 'abstract/variables';
+@import 'abstract/functions';
 
 // Componentes
 @import 'components/buttons';
@@ -14,4 +15,6 @@
 // Paginas
 @import 'pages/home';
 @import 'pages/login';
-@import 'pages/dashboard'
+@import 'pages/dashboard';
+
+@import 'pages/indexDDO';
