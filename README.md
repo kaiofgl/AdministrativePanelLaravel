@@ -35,3 +35,9 @@ Rota para retornar funcionários de uma determinada empresa
 ```bash
 http://exemplo.com/api/v1/companies/{id-da-empresa}/employees
 ```
+
+
+Rota Layout Benefícios DDO
+```bash
+http://exemplo.com/ddo
+```
