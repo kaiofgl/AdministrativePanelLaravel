@@ -13,3 +13,21 @@
         color: $mainOrange;
     }
 }
+
+
+.button-register{
+    text-align: center;
+    width: 100%;
+    button{
+        max-width: 190px;
+        border: none;
+        background: linear-gradient(to right,$mainOrange,$secondaryOrange);
+        width: 40%;
+        height: 36px;
+        border-radius: 20px;
+        font-family: 'Publica Sans Thin';
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+}

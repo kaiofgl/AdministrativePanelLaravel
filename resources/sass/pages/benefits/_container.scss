@@ -1,0 +1,229 @@
+body{
+    background:#EFEDED  ;
+}
+
+.container{
+    padding-top:$sizeHeigthMenu;
+    &__title{
+        color:$thirdOrange;
+        text-align: center;
+        padding: 40px;
+        font-size: calc(18px + 1.7vw);
+        font-family: Publica Sans Thin;
+        strong{
+            font-family:Publica Sans Medium;
+        }   
+    } 
+    &__image_slide{
+        img{
+            width: 100%;
+        }
+    }
+    &__selector-patient-indicator{
+        color:$thirdOrange;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 30px;
+        margin: 25px 0px;
+        font-family:Publica Sans Medium;
+        .selector__button{
+            color: $secondaryOrange;
+        }
+        .container__selector-content{
+            &:nth-child(2){
+                display:none;
+            }
+            .underline{
+                &-patient{
+                    display:none;
+                }
+                &-indicator{
+                    display: none;
+                }
+            }
+        }
+    }
+    .text-p{
+        color:$thirdOrange;
+        text-align: center;
+        font-size: 23px;
+        font-family: Publica Sans Medium;
+    }
+
+    .underline-containers-selector{ 
+        width: 50%;
+        border: 2px solid $mainOrange;
+        background: $mainOrange;
+    }
+
+    &__selector-patient{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        .container-patient{
+            width: 70%;
+            .blue{
+                background: $mainBlue;
+            }
+            .orange{
+                background: $mainOrange;
+            }
+            .container__img{   
+                &-logo{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 38px;
+                    &-icon{
+                        border-radius: 30px;
+                        height: 50px;
+                        width: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: -1;
+                        i{
+                            color:white
+                        }
+                    }
+                }
+            }
+        }
+        p{
+            color:$thirdOrange;
+            padding: 15px;
+            font-family: Publica Sans Thin;
+            text-align: center;
+            strong{
+                font-family: Publica Sans Medium;
+            }
+        }
+    }
+    .text-p-footer{
+        text-align: center;
+        font-family: 'Publica Sans Thin';
+        font-size: 25px;
+        padding: 10px;
+        color:$thirdOrange
+    }
+    .container__image_slide-footer{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: $lgm) { //640px
+    .footer-ddo{
+        display: none!important;
+    }
+}
+
+@include responsive($lgm){//960px
+    .container{
+        &__title{
+            font-size: calc(18px + 1.7vw);
+            margin: 0 30%;
+        }
+        &__image_slide{
+            display:none;
+        }
+        &__selector-patient-indicator{
+            justify-content: center;   
+            .selector__button{
+                display:none;
+            }
+            .container__selector-content{
+                padding: 0 5%;
+                &:nth-child(1){
+                    display:block;
+                    .container__text-patient-indicator{
+                        font-family: Publica Sans Thin;
+                    }
+                }
+                &:nth-child(2){
+                    display:block;
+                    
+                }
+                .underline{
+                    &-patient{
+                        display: flex;
+                        border: 1.5px solid $mainOrange;
+                        background-color: $mainOrange;
+                    }
+                    &-indicator{
+                        display: flex;
+                        border: 1.5px solid $mainBlue;
+                        background-color: $mainBlue;
+                    }
+                }
+            }
+        }
+        .text-p{
+            display: none;
+        }
+        .underline-containers-selector{
+            display: none;
+        }
+        .container__selector-patient{
+            .container-patient{
+                width: 45%;
+                column-count: 2;
+                column-gap: 8px;
+                .container__img{
+                    height: 75px;
+                    padding: 5px 0;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: 100%;
+                    page-break-inside: avoid;
+                    break-inside: avoid-column;
+                    p{
+                        text-align: start;
+                    }
+                    &-logo{
+        
+                        height: 50px;
+                    }
+                    p{
+                        font-size: calc(7px + 0.7vw);
+                    }
+                }
+            }
+        }
+        .text-p-footer{
+            margin-top: 50px;
+        }
+        .container__image_slide-footer{
+            margin: 30px auto;
+            display: flex;
+            height: 285px;   
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    .footer-ddo{
+        font-family: 'Publica Sans Thin';
+        color: white;
+        background: #707070;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        height: 80px;
+    }
+}
+
+
+@include responsive($lg){
+    .container{
+        .container__selector-patient{
+            .container-patient{
+                .container__img{
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
