@@ -73,6 +73,23 @@
   color: #F16136;
 }
 
+.button-register {
+  text-align: center;
+  width: 100%;
+}
+.button-register button {
+  max-width: 190px;
+  border: none;
+  background: linear-gradient(to right, #F16136, #FA8133);
+  width: 40%;
+  height: 36px;
+  border-radius: 20px;
+  font-family: "Publica Sans Thin";
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -309,6 +326,7 @@ body, html {
   display: none;
 }
 .navbar__logo {
+  margin-left: 30px;
   color: white;
   width: 20%;
   text-align: center;
@@ -319,6 +337,7 @@ body, html {
 .navbar__list-links {
   color: white;
   width: 50%;
+  justify-content: start;
 }
 .navbar__list-links-ul {
   display: flex;
@@ -341,7 +360,6 @@ body, html {
   color: white;
   width: 30%;
   display: flex;
-  justify-content: space-evenly;
 }
 .navbar .navbar__login-register .navbar__login {
   display: flex;
@@ -416,12 +434,13 @@ body, html {
     width: 80%;
   }
   .navbar__list-links-ul {
+    width: 100%;
     display: grid;
     grid-auto-columns: 2fh;
     grid-template-columns: repeat(2, 2fr);
   }
   .navbar__list-links-ul li {
-    background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-image: url(https://i.pinimg.com/originals/2c/f0/cc/2cf0cce180d665e275d8fe5b05e61dd9.jpg);
     margin-bottom: 10px;
     border-radius: 20px;
     display: flex;
@@ -439,6 +458,7 @@ body, html {
     font-size: 1rem;
   }
   .navbar__login-register {
+    justify-content: start;
     position: absolute;
     width: 100% !important;
     left: 0;
@@ -452,10 +472,12 @@ body, html {
     display: none !important;
   }
 }
-@media screen and (min-width: 448px) {
+@media screen and (min-width: 320px) {
   .navbar hr {
+    border: 1px solid white;
+    background: white;
     position: absolute;
-    top: 100px;
+    top: 70px;
     width: 50%;
     margin: 2px;
   }
@@ -481,13 +503,16 @@ body, html {
     font-size: 51px;
   }
   .navbar__list-links {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
     width: 80%;
   }
   .navbar__list-links-a {
     font-size: 1rem;
   }
   .navbar__login-register {
-    justify-content: start !important;
     margin-left: 30px;
   }
   .navbar__login-register__login a {
@@ -547,6 +572,9 @@ body, html {
     background: green;
   }
 
+  .navbar__logo {
+    margin-left: 30px;
+  }
   .navbar hr {
     display: none;
   }
@@ -557,6 +585,8 @@ body, html {
     font-size: 1rem;
   }
   .navbar__login-register {
+    display: flex;
+    justify-content: space-around;
     width: 35% !important;
   }
   .navbar__login-register .navbar__login a {
@@ -585,5 +615,211 @@ body, html {
   }
   .navbar__login-register .navbar__register a {
     font-size: 1.2rem !important;
+  }
+}
+body {
+  background: #EFEDED;
+}
+
+.container {
+  padding-top: 90px;
+}
+.container__title {
+  color: #73493C;
+  text-align: center;
+  padding: 40px;
+  font-size: calc(18px + 1.7vw);
+  font-family: Publica Sans Thin;
+}
+.container__title strong {
+  font-family: Publica Sans Medium;
+}
+.container__image_slide img {
+  width: 100%;
+}
+.container__selector-patient-indicator {
+  color: #73493C;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+  margin: 25px 0px;
+  font-family: Publica Sans Medium;
+}
+.container__selector-patient-indicator .selector__button {
+  color: #FA8133;
+}
+.container__selector-patient-indicator .container__selector-content:nth-child(2) {
+  display: none;
+}
+.container__selector-patient-indicator .container__selector-content .underline-patient {
+  display: none;
+}
+.container__selector-patient-indicator .container__selector-content .underline-indicator {
+  display: none;
+}
+.container .text-p {
+  color: #73493C;
+  text-align: center;
+  font-size: 23px;
+  font-family: Publica Sans Medium;
+}
+.container .underline-containers-selector {
+  width: 50%;
+  border: 2px solid #F16136;
+  background: #F16136;
+}
+.container__selector-patient {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.container__selector-patient .container-patient {
+  width: 70%;
+}
+.container__selector-patient .container-patient .blue {
+  background: #3BA8B4;
+}
+.container__selector-patient .container-patient .orange {
+  background: #F16136;
+}
+.container__selector-patient .container-patient .container__img-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+}
+.container__selector-patient .container-patient .container__img-logo-icon {
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.container__selector-patient .container-patient .container__img-logo-icon i {
+  color: white;
+}
+.container__selector-patient p {
+  color: #73493C;
+  padding: 15px;
+  font-family: Publica Sans Thin;
+  text-align: center;
+}
+.container__selector-patient p strong {
+  font-family: Publica Sans Medium;
+}
+.container .text-p-footer {
+  text-align: center;
+  font-family: "Publica Sans Thin";
+  font-size: 25px;
+  padding: 10px;
+  color: #73493C;
+}
+.container .container__image_slide-footer {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .footer-ddo {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 960px) {
+  .container__title {
+    font-size: calc(18px + 1.7vw);
+    margin: 0 30%;
+  }
+  .container__image_slide {
+    display: none;
+  }
+  .container__selector-patient-indicator {
+    justify-content: center;
+  }
+  .container__selector-patient-indicator .selector__button {
+    display: none;
+  }
+  .container__selector-patient-indicator .container__selector-content {
+    padding: 0 5%;
+  }
+  .container__selector-patient-indicator .container__selector-content:nth-child(1) {
+    display: block;
+  }
+  .container__selector-patient-indicator .container__selector-content:nth-child(1) .container__text-patient-indicator {
+    font-family: Publica Sans Thin;
+  }
+  .container__selector-patient-indicator .container__selector-content:nth-child(2) {
+    display: block;
+  }
+  .container__selector-patient-indicator .container__selector-content .underline-patient {
+    display: flex;
+    border: 1.5px solid #F16136;
+    background-color: #F16136;
+  }
+  .container__selector-patient-indicator .container__selector-content .underline-indicator {
+    display: flex;
+    border: 1.5px solid #3BA8B4;
+    background-color: #3BA8B4;
+  }
+  .container .text-p {
+    display: none;
+  }
+  .container .underline-containers-selector {
+    display: none;
+  }
+  .container .container__selector-patient .container-patient {
+    width: 45%;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+  .container .container__selector-patient .container-patient .container__img {
+    height: 75px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    page-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+         break-inside: avoid-column;
+  }
+  .container .container__selector-patient .container-patient .container__img p {
+    text-align: start;
+  }
+  .container .container__selector-patient .container-patient .container__img-logo {
+    height: 50px;
+  }
+  .container .container__selector-patient .container-patient .container__img p {
+    font-size: calc(7px + 0.7vw);
+  }
+  .container .text-p-footer {
+    margin-top: 50px;
+  }
+  .container .container__image_slide-footer {
+    margin: 30px auto;
+    display: flex;
+    height: 285px;
+  }
+  .container .container__image_slide-footer img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+
+  .footer-ddo {
+    font-family: "Publica Sans Thin";
+    color: white;
+    background: #707070;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .container .container__selector-patient .container-patient .container__img {
+    height: 50px;
   }
 }

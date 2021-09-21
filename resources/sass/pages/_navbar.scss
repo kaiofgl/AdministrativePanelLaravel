@@ -15,6 +15,7 @@
         display:none;
     }
     &__logo{
+        margin-left: 30px;
         color:white;
         width: 20%;
         text-align: center;
@@ -25,6 +26,7 @@
     &__list-links{
         color:white;
         width: 50%;
+        justify-content: start;
         &-ul{
             display:flex;
             .active{
@@ -49,7 +51,6 @@
         color:white;
         width: 30%;
         display:flex;
-        justify-content: space-evenly;
         .navbar{
             &__login{
                 display: flex;
@@ -94,8 +95,6 @@
     padding-top:$sizeHeigthMenu;
 }
 
-
-
 @media screen and (max-width: $lgm) { //640px
     .navbar{
         label[for=navbar__menu-btn]:nth-of-type(1) {
@@ -109,7 +108,6 @@
             font-weight: bold;
             display: inline-block;
         }
-
         &__menus-links-login-register {
             width: 70%;
             height: 100%;
@@ -129,11 +127,12 @@
         &__list-links{
             width: 80%;
             &-ul{
+                width: 100%;
                 display: grid;
                 grid-auto-columns: 2fh;
                 grid-template-columns: repeat(2,2fr);
                 li{
-                    background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+                    background-image: url(https://i.pinimg.com/originals/2c/f0/cc/2cf0cce180d665e275d8fe5b05e61dd9.jpg);
                     margin-bottom: 10px;
                     border-radius: 20px;
                     display: flex;
@@ -148,19 +147,18 @@
             &-a{
                 display: contents;
             }
-            
         }
         &__list-links-a{
             font-size: $navbarMenu__fontSize-med;
         }
         &__login-register{
+            justify-content: start;
             position: absolute;
             width: 100%!important;
             left: 0;
             top: 0;
             height: $sizeHeigthMenu;
             &navbar__login{
-
                 a{
                     font-size: $navbarMenu__fontSize-med;
                 }
@@ -172,11 +170,13 @@
     }
 }
 
-@include responsive($sm){//448px
+@include responsive($sm){//320px
     .navbar{
         hr{
+            border: 1px solid white;
+            background: white;
             position: absolute;
-            top: $sizeHeigthMenu + 10px;
+            top: $sizeHeigthMenu - 20px;
             width: 50%;
             margin: 2px;
         }
@@ -192,7 +192,6 @@
             height: 100%;
         }
         &__menus-links-login-register{
-
             animation: hideMenu cubic-bezier(.76,0,.09,1) 0.5s;
         }
         &__menu-icon{
@@ -201,19 +200,20 @@
             font-size: 51px;
         }
         &__list-links{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
             width: 80%;
         }
         &__list-links-a{
             font-size: $navbarMenu__fontSize-med;
         }
         &__login-register{
-            justify-content: start!important;
             margin-left: 30px;
             &__login{
-
                 a{
-                    font-size: $navbarMenu__fontSize-med;
-                    
+                    font-size: $navbarMenu__fontSize-med; 
                 }
             }
             &__register{
@@ -252,7 +252,6 @@
     .content{
         background:saddlebrown;
     }
-    
 }
 
 @include responsive($lgm){//960px
@@ -260,6 +259,9 @@
         background:green;
     }
     .navbar{
+        &__logo{
+            margin-left: 30px;
+        }
         hr{
             display:none;
         }
@@ -270,6 +272,8 @@
             font-size: $navbarMenu__fontSize-med;
         }
         &__login-register{
+            display:flex;
+            justify-content: space-around;
             width: 35%!important;
             .navbar__login{
                 a{
